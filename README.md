@@ -19,8 +19,8 @@ Cleans raw Steam data by:
 - Filtering out invalid or unusable entries  
 
 **Inputs:**  
-- `gaming_datasets/steam/games.csv`  
-- `gaming_datasets/steam/purchased_games.csv`  
+- `gaming_datasets/steam/games.csv`  (from dataset)
+- `gaming_datasets/steam/purchased_games.csv`  (from dataset)
 
 **Outputs:**  
 - `games_genres.csv` — Cleaned game metadata with genre info  
