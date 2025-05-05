@@ -107,3 +107,34 @@ Loads the trained content-based model and test data to:
 
 ## Future Directions
 To further improve the quality and personalization of recommendations, future work on this project will focus on developing a hybrid model that combines content-based and collaborative filtering approaches into a unified architecture. This hybrid system would aim to capture both the behavioral patterns in user-game interactions (as seen in collaborative filtering) and the rich descriptive features of games such as genre and developer (used in content-based filtering). By leveraging both sources of information, the model has the potential to overcome the limitations of each individual approach and provide more accurate and diverse recommendations. The content-based model can also be enhanced by integrating developer metadata, such as the game studio or publisher. Many players show strong loyalty to specific developers or franchises, and accounting for that can lead to more personalized suggestions. On the collaborative side, incorporating social signals—such as whether a player’s friends own or play a game—could introduce a social dimension to recommendations, capturing the peer influence that often drives game discovery. Additionally, since the dataset includes data from PlayStation, Xbox, and Steam, the model could be extended to support device-aware recommendations. This would allow the system to tailor game suggestions based on the platform a user prefers or owns, helping avoid recommending games that are unavailable on a user’s current system. These ideas include some next steps in building a more flexible, intelligent, and personalized recommendation system that better reflects how people choose and discover games today.
+
+## Contributions
+
+This project was completed independently. All components of the work were carried out by me (Rahul), including:
+
+- **Research and Literature Review**:  
+  Identified and analyzed relevant academic papers to guide the design and architecture of both content-based and collaborative filtering models, particularly those utilizing deep learning and recommender systems for games.
+
+- **Dataset Acquisition**:  
+  Located and selected a comprehensive multi-platform dataset that includes user behavior data from Steam, PlayStation, and Xbox.
+
+- **Data Cleaning and Preprocessing**:  
+  Developed scripts to clean the raw data, including filtering invalid entries, handling missing metadata, parsing game libraries, and preparing the dataset for modeling.
+
+- **Collaborative Filtering Model**:  
+  Implemented a denoising autoencoder-based collaborative filtering model inspired by the referenced research. Included logic for masking input data and training the model to predict hidden user-game interactions.
+
+- **Content-Based Filtering Model**:  
+  Created a neural network model that uses player genre preferences and game metadata (e.g., genres) to predict game interest. Built logic for masking data, generating training samples, and encoding game features.
+
+- **Model Evaluation**:  
+  Conducted pre- and post-training evaluations of both models using metrics such as accuracy, precision, recall, F1 score, and Top-5 hit rate.
+
+- **Visualization and Graphics**:  
+  Designed and created clear visual representations of the model architecture, performance metrics, and results for inclusion in the final presentation materials.
+
+- **Poster Creation**:  
+  Designed and authored the final project poster, summarizing the research question, methodology, results, and future directions in a visually engaging and informative format.
+
+- **Documentation and Code Structure**:  
+  Organized the codebase, added helpful comments, and wrote detailed instructions for reproducing results in the `README.md`.
