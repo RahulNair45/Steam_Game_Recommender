@@ -5,13 +5,13 @@ This project explores two machine learning approaches—content-based filtering 
 
 Data set used for this project: https://www.kaggle.com/datasets/artyomkruglov/gaming-profiles-2025-steam-playstation-xbox/data
 
-## 🔁 Replication Instructions
+## Replication Instructions
 
 Follow the steps below to reproduce the results from this project.
 
 ---
 
-### 1. `preprocess.py` 🧼  
+### 1. `preprocess.py` 
 **Purpose:**  
 Cleans raw Steam data by:
 - Removing games without genre data  
@@ -28,7 +28,7 @@ Cleans raw Steam data by:
 
 ---
 
-### 2. `collaborative_model.py` 🤝  
+### 2. `collaborative_model.py` 
 **Purpose:**  
 Trains a **collaborative filtering model** (Denoising Autoencoder):
 - Limits to top 1000 most common games  
@@ -52,7 +52,7 @@ Trains a **collaborative filtering model** (Denoising Autoencoder):
 
 ---
 
-### 3. `collaborative_eval.py` 📊  
+### 3. `collaborative_eval.py`  
 **Purpose:**  
 Loads the trained collaborative model and test data to:
 - Evaluate classification performance (Accuracy, Precision, Recall, F1 Score)  
@@ -68,7 +68,7 @@ Loads the trained collaborative model and test data to:
 
 ---
 
-### 4. `content_model.py` 🎮  
+### 4. `content_model.py` 
 **Purpose:**  
 Trains a **content-based filtering model** using:
 - Player genre preferences (built from owned games)  
@@ -89,7 +89,7 @@ Trains a **content-based filtering model** using:
 
 ---
 
-### 5. `content_eval.py` 📈  
+### 5. `content_eval.py` 
 **Purpose:**  
 Loads the trained content-based model and test data to:
 - Evaluate classification performance (Accuracy, Precision, Recall, F1 Score)  
@@ -104,4 +104,8 @@ Loads the trained content-based model and test data to:
 - Example predictions per user  
 
 ---
+
+## Future Directions
+To further enhance the accuracy and robustness of game recommendations, future work will focus on developing a **hybrid model** that combines both content-based and collaborative filtering approaches. This unified architecture will aim to leverage the strengths of both methods—user behavior patterns from collaborative filtering and rich metadata (e.g., genres) from content-based filtering—and will be evaluated against the individual models to measure performance gains. Additionally, the content-based model can be improved by integrating **developer-related metadata** such as game studio or publisher, which may capture user preferences for specific creators or franchises. On the collaborative side, incorporating **social signals**—like whether a user’s friends own a game—can allow the model to account for **peer influence**, a common driver of game discovery and purchase decisions. These extensions open up exciting opportunities for more personalized and socially-aware recommendations.
+
 
